@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Finance in Chester | Cheshire Trade Centre</title>
+<meta name="description" content="Car finance for all credit situations in Chester. Check your budget with a soft search first, then talk to us about the car. Subject to status.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --qt-blue:#0889C8; --qt-blue-dark:#0a7ab3; --qt-ink:#0d1d2c; --qt-ink-2:#12273A;
+    --qt-bg:#F4F7FA; --qt-line:#e5e7eb; --qt-muted:#55677a; --qt-red:#dc2626;
+    --qt-radius:16px; --qt-shadow:0 10px 30px rgba(13,29,44,.08);
+  }
+  .qt{font-family:"DM Sans",system-ui,sans-serif;color:var(--qt-ink);background:#fff;line-height:1.55}
+  .qt *{box-sizing:border-box}
+  .qt h1,.qt h2,.qt h3{font-family:Poppins,"DM Sans",sans-serif;line-height:1.15;margin:0}
+  .qt a{text-decoration:none}
+  .qt .wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+  .qt .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-weight:700;
+    padding:15px 26px;border-radius:999px;background:var(--qt-blue);color:#fff;border:0;cursor:pointer;
+    font-size:1.02rem;transition:background .15s ease}
+  .qt .btn:hover{background:var(--qt-blue-dark);color:#fff}
+  .qt .btn-lg{padding:18px 34px;font-size:1.1rem}
+  .qt .btn-ghost{background:#fff;color:var(--qt-ink);border:1.5px solid var(--qt-line)}
+  .qt .btn-ghost:hover{border-color:var(--qt-blue);color:var(--qt-blue);background:#fff}
+
+  /* top bar */
+  .qt-top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--qt-line)}
+  .qt-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:72px}
+  .qt-mark{font-family:Poppins,sans-serif;font-weight:700;font-size:1.05rem;letter-spacing:.02em;color:var(--qt-ink)}
+  .qt-mark small{display:block;font-family:"DM Sans",sans-serif;font-weight:500;font-size:.74rem;color:var(--qt-muted);letter-spacing:.06em;text-transform:uppercase}
+  .qt-top .call{font-weight:700;color:var(--qt-ink);white-space:nowrap}
+  .qt-top .call span{color:var(--qt-blue)}
+
+  /* hero */
+  .qt-hero{background:linear-gradient(180deg,#F4F7FA 0%,#eaf3f9 100%);padding:56px 0 44px}
+  .qt-hero .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--qt-line);
+    color:var(--qt-ink-2);font-weight:600;font-size:.82rem;padding:7px 14px;border-radius:999px;margin-bottom:20px}
+  .qt-hero h1{font-size:clamp(2rem,4.6vw,3.4rem);max-width:19ch;letter-spacing:-.02em}
+  .qt-hero h1 em{font-style:normal;color:var(--qt-blue)}
+  .qt-hero p.lede{font-size:clamp(1rem,1.5vw,1.15rem);color:var(--qt-muted);max-width:52ch;margin:18px 0 26px}
+  .qt-ticks{display:flex;flex-wrap:wrap;gap:10px 22px;margin:0 0 26px;padding:0;list-style:none}
+  .qt-ticks li{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--qt-ink-2)}
+  .qt-ticks b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#e3f3fb;color:var(--qt-blue);font-size:.75rem}
+  .qt-apr{margin:22px 0 0;font-size:.84rem;color:var(--qt-muted);max-width:64ch}
+
+  /* step card */
+  .qt-step{background:#fff;border:1px solid var(--qt-line);border-radius:var(--qt-radius);box-shadow:var(--qt-shadow);
+    padding:26px;margin-top:34px}
+  .qt-step h2{font-size:1.15rem;margin-bottom:6px}
+  .qt-step .sub{color:var(--qt-muted);font-size:.92rem;margin:0 0 18px}
+  .qt-licence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .qt-licence a{display:block;border:1.5px solid var(--qt-line);border-radius:12px;padding:16px 14px;background:#fff;color:var(--qt-ink);transition:.15s}
+  .qt-licence a:hover{border-color:var(--qt-blue);box-shadow:0 6px 18px rgba(8,137,200,.12);transform:translateY(-1px)}
+  .qt-licence .ico{font-size:1.3rem;display:block;margin-bottom:6px}
+  .qt-licence strong{display:block;font-size:.98rem}
+  .qt-licence span.note{display:block;font-size:.8rem;color:var(--qt-muted);margin-top:2px}
+  @media (max-width:640px){.qt-licence{grid-template-columns:1fr}}
+
+  /* usp strip */
+  .qt-strip{background:var(--qt-ink);color:#fff;padding:14px 0}
+  .qt-strip ul{display:flex;flex-wrap:wrap;gap:10px 26px;justify-content:center;margin:0;padding:0;list-style:none;font-size:.88rem;font-weight:500}
+  .qt-strip li::before{content:"✓";color:#5cc9f5;margin-right:7px;font-weight:700}
+
+  /* why choose */
+  .qt-why{background:#fff;padding:64px 0}
+  .qt-why .head{display:flex;align-items:end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+  .qt-why h2{font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.01em}
+  .qt-stockbadge{background:#e3f3fb;color:var(--qt-blue);font-weight:700;border-radius:999px;padding:10px 18px;font-size:.9rem;white-space:nowrap}
+  .qt-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .qt-card{background:var(--qt-bg);border-radius:var(--qt-radius);padding:24px}
+  .qt-card h3{font-size:1.05rem;margin-bottom:8px}
+  .qt-card p{margin:0;color:var(--qt-muted);font-size:.93rem}
+  .qt-card .ico{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:12px;background:#fff;
+    color:var(--qt-blue);font-size:1.1rem;margin-bottom:14px;box-shadow:0 2px 8px rgba(13,29,44,.06)}
+  @media (max-width:900px){.qt-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:520px){.qt-grid{grid-template-columns:1fr}}
+
+  /* warranty band */
+  .qt-band{background:var(--qt-blue);color:#fff;text-align:center;padding:34px 0}
+  .qt-band p{margin:0;font-family:Poppins,sans-serif;font-weight:600;font-size:clamp(1.05rem,2.2vw,1.45rem)}
+
+  /* featured */
+  .qt-feat{background:var(--qt-bg);padding:64px 0}
+  .qt-feat .head{text-align:center;margin-bottom:34px}
+  .qt-feat h2{font-size:clamp(1.5rem,2.6vw,2.1rem)}
+  .qt-feat .sub{color:var(--qt-muted);margin:8px 0 0}
+  .qt-cars{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media (max-width:900px){.qt-cars{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:560px){.qt-cars{grid-template-columns:1fr}}
+  .qt-car{background:#fff;border-radius:var(--qt-radius);overflow:hidden;box-shadow:var(--qt-shadow);display:flex;flex-direction:column}
+  .qt-car .ph{aspect-ratio:16/10;background:#dfe7ee center/cover no-repeat;position:relative}
+  .qt-car .ph-none{display:grid;place-items:center;background:linear-gradient(135deg,#e8eef4,#dbe6ee);position:relative}
+  .qt-car .ph-note{color:#7d8fa0;font-size:.82rem;font-weight:600}
+  .qt-car .dep{position:absolute;left:12px;top:12px;background:#fff;color:var(--qt-blue);font-weight:700;font-size:.74rem;
+    padding:5px 10px;border-radius:999px;box-shadow:0 2px 6px rgba(13,29,44,.12)}
+  .qt-car .body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:6px;flex:1}
+  .qt-car h3{font-size:1rem;line-height:1.3}
+  .qt-car .v{color:var(--qt-muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.04em}
+  .qt-car .meta{color:var(--qt-muted);font-size:.85rem;margin-top:2px}
+  .qt-car .price{font-family:Poppins,sans-serif;font-weight:700;font-size:1.35rem;margin-top:auto;padding-top:10px}
+  .qt-car .fin{font-size:.78rem;color:var(--qt-muted)}
+  .qt-car .btn{margin-top:12px;width:100%;padding:12px 0;font-size:.92rem}
+
+  /* reviews */
+  .qt-rev{background:#fff;padding:60px 0;text-align:center}
+  .qt-rev .stars{color:#f5a623;font-size:1.6rem;letter-spacing:2px}
+  .qt-rev h2{font-size:clamp(1.4rem,2.4vw,1.9rem);margin:10px 0 6px}
+  .qt-rev p{color:var(--qt-muted);max-width:52ch;margin:0 auto 22px}
+
+  /* final cta */
+  .qt-cta{background:linear-gradient(135deg,#0d1d2c 0%,#12273A 60%,#0a7ab3 100%);color:#fff;padding:66px 0;text-align:center}
+  .qt-cta h2{font-size:clamp(1.6rem,3vw,2.4rem);margin-bottom:12px}
+  .qt-cta p{color:#c7d6e3;max-width:56ch;margin:0 auto 26px}
+
+
+  /* footer */
+  .qt-foot{background:var(--qt-ink-2);color:#b9c9d6;font-size:.8rem;line-height:1.65;padding:34px 0}
+  .qt-foot a{color:#e5eef5;text-decoration:underline}
+  .qt-foot .wrap{display:grid;gap:14px}
+  .qt-foot strong{color:#fff}
+  .qt-foot .small{color:#8fa6b8}
+</style>
+<meta name="robots" content="noindex, nofollow, noarchive"><script>try{if(!localStorage.getItem('consentMode')){localStorage.setItem('consentMode',JSON.stringify({necessary:true,analytics:false,marketing:false}));}}catch(e){}</script></head>
+<body class="qt">
+
+<div class="qt-top">
+  <div class="wrap">
+    <div class="qt-mark">CHESHIRE TRADE CENTRE<small>Car finance specialists · Chester</small></div>
+    <a class="call" href="tel:08009174622">Call <span>0800 917 4622</span></a>
+  </div>
+</div>
+
+<section class="qt-hero">
+  <div class="wrap">
+    <a class="eyebrow" href="tel:08009174622">★ 4.6 on Google · Chester, Cheshire</a>
+    <h1>Find your perfect car today &mdash; <em>even with bad credit</em></h1>
+    <p class="lede">Trusted cars, tailored finance. We help real people get the car and the finance they need, without the stress.</p>
+    <ul class="qt-ticks">
+      <li><b>✓</b> Soft search to start</li>
+      <li><b>✓</b> Fast response, usually within the hour</li>
+      <li><b>✓</b> All credit situations considered</li>
+    </ul>
+    <a class="btn btn-lg" href="finance.html">Check what you can afford</a>
+    <a class="btn btn-lg btn-ghost" href="stock.html" style="margin-left:8px">Browse the cars</a>
+    <p class="qt-apr">Rates from 9.9% APR. Representative 10.9% APR. We are a credit broker, not a lender. Finance is subject to status.
+      Checking your options starts with a soft search, which does not affect your credit score; a lender may run a hard search when you submit a full application.</p>
+
+    <div class="qt-step">
+      <h2>Know your budget first</h2>
+      <p class="sub">A 60-second check with a soft search, so you know what you are working with before you fall for a car.</p>
+      <div class="qt-licence">
+        <a href="finance.html"><span class="ico"><i class="fa-solid fa-car"></i></span><strong>Full</strong><span class="note">Full UK driving licence</span></a>
+        <a href="finance.html"><span class="ico"><i class="fa-solid fa-id-card"></i></span><strong>Provisional</strong><span class="note">Learning to drive</span></a>
+        <a href="finance.html"><span class="ico"><i class="fa-solid fa-globe"></i></span><strong>EU</strong><span class="note">European licence</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="qt-strip">
+  <div class="wrap">
+    <ul>
+      <li>Top quality used cars</li>
+      <li>Tailored finance options</li>
+      <li>Quality assured vehicles</li>
+      <li>All credit considered</li>
+      <li>1000s of happy customers</li>
+      <li>Excellent personal service</li>
+    </ul>
+  </div>
+</div>
+
+<section class="qt-why">
+  <div class="wrap">
+    <div class="head">
+      <h2>Why choose Cheshire Trade Centre?</h2>
+      <div class="qt-stockbadge">18 cars in stock now</div>
+    </div>
+    <div class="qt-grid">
+      <div class="qt-card"><span class="ico"><i class="fa-solid fa-credit-card"></i></span><h3>Flexible car finance</h3>
+        <p>We consider all credit situations, good, bad or limited. Everyone gets a fair look.</p></div>
+      <div class="qt-card"><span class="ico"><i class="fa-solid fa-bolt"></i></span><h3>Quick decisions</h3>
+        <p>Same-day decisions, and same-day drive-away available on most vehicles.</p></div>
+      <div class="qt-card"><span class="ico"><i class="fa-solid fa-magnifying-glass"></i></span><h3>Quality cars</h3>
+        <p>Every vehicle is HPI checked and prepared to our standard before it goes on sale.</p></div>
+      <div class="qt-card"><span class="ico"><i class="fa-solid fa-handshake"></i></span><h3>Friendly local service</h3>
+        <p>Personal, face-to-face service from a team that is based here in Chester.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="qt-band"><div class="wrap"><p>12 months warranty, MOT and oil and filter change on all cars</p></div></div>
+
+<section class="qt-feat">
+  <div class="wrap">
+    <div class="head">
+      <h2>Featured vehicles</h2>
+      <p class="sub">Quality used cars at sensible prices, with £0 deposit finance options available.</p>
+    </div>
+    <div class="qt-cars">
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2015-nissan-juke-01122cb5.html" style="background-image:url('assets/stock/2015-nissan-juke-01122c.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2015-nissan-juke-01122cb5.html" style="color:inherit">Nissan Juke</a></h3>
+          <div class="v">TEKNA DCI</div>
+          <div class="meta">2015 · 82,000 miles · Diesel · Manual</div>
+          <div class="price">£5,500</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2015-nissan-juke-01122cb5.html">View this car</a>
+        </div>
+      </article>
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2014-seat-ibiza-40c4e7c9.html" style="background-image:url('assets/stock/2014-seat-ibiza-40c4e7.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2014-seat-ibiza-40c4e7c9.html" style="color:inherit">SEAT Ibiza</a></h3>
+          <div class="v">TOCA</div>
+          <div class="meta">2014 · 48,000 miles · Petrol · Manual</div>
+          <div class="price">£5,900</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2014-seat-ibiza-40c4e7c9.html">View this car</a>
+        </div>
+      </article>
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2017-vauxhall-adam-72019cd5.html" style="background-image:url('assets/stock/2017-vauxhall-adam-72019c.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2017-vauxhall-adam-72019cd5.html" style="color:inherit">Vauxhall Adam</a></h3>
+          <div class="v">JAM</div>
+          <div class="meta">2017 · 60,000 miles · Petrol · Manual</div>
+          <div class="price">£6,900</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2017-vauxhall-adam-72019cd5.html">View this car</a>
+        </div>
+      </article>
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2017-toyota-aygo-595dae07.html" style="background-image:url('assets/stock/2017-toyota-aygo-595dae.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2017-toyota-aygo-595dae07.html" style="color:inherit">Toyota Aygo</a></h3>
+          <div class="v">VVT-I X-CITE 3</div>
+          <div class="meta">2017 · 78,000 miles · Petrol · Manual</div>
+          <div class="price">£6,900</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2017-toyota-aygo-595dae07.html">View this car</a>
+        </div>
+      </article>
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2019-vauxhall-astra-ecd4002f.html" style="background-image:url('assets/stock/2019-vauxhall-astra-ecd400.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2019-vauxhall-astra-ecd4002f.html" style="color:inherit">Vauxhall Astra</a></h3>
+          <div class="v">TECH LINE NAV ECOTEC S/S</div>
+          <div class="meta">2019 · 78,000 miles · Petrol · Manual</div>
+          <div class="price">£6,900</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2019-vauxhall-astra-ecd4002f.html">View this car</a>
+        </div>
+      </article>
+            <article class="qt-car">
+                <a class="ph" href="vehicle-2017-kia-picanto-3170993f.html" style="background-image:url('assets/stock/2017-kia-picanto-317099.jpg')">
+          <span class="dep">£0 deposit</span>
+        </a>
+                <div class="body">
+          <h3><a href="vehicle-2017-kia-picanto-3170993f.html" style="color:inherit">Kia Picanto</a></h3>
+          <div class="v">1 AIR</div>
+          <div class="meta">2017 · 28,000 miles · Petrol · Manual</div>
+          <div class="price">£6,900</div>
+          <div class="fin">Finance available, subject to status</div>
+          <a class="btn" href="vehicle-2017-kia-picanto-3170993f.html">View this car</a>
+        </div>
+      </article>
+          </div>
+    <p style="text-align:center;margin:30px 0 0">
+      <a class="btn btn-ghost" href="stock.html">View all 18 cars</a>
+    </p>
+  </div>
+</section>
+
+<section class="qt-rev">
+  <div class="wrap">
+    <div class="stars" aria-hidden="true">★★★★★</div>
+    <h2>Rated 4.6 out of 5 on Google</h2>
+    <p>Our reviews are written by customers who actually bought a car from us and collected it. Worth a read before you come down.</p>
+    <a class="btn btn-ghost" href="https://www.google.com/maps/place/?q=place_id:ChIJ_Tf3ax3drekgRIzB3S236f2M" target="_blank" rel="noopener">Read the reviews</a>
+  </div>
+</section>
+
+<section class="qt-cta">
+  <div class="wrap">
+    <h2>Join our happy customers</h2>
+    <p>Tell us what you need and what you can afford. We will do the rest, and you will know where you stand before you commit.</p>
+    <a class="btn btn-lg" href="contact.html">Start your enquiry</a>
+    <a class="btn btn-lg btn-ghost" href="tel:08009174622" style="margin-left:8px;background:transparent;color:#fff;border-color:rgba(255,255,255,.45)">Call 0800 917 4622</a>
+  </div>
+</section>
+
+<footer class="qt-foot">
+  <div class="wrap">
+    <div><strong>Cheshire Trade Centre Limited</strong>, trading as Cheshire Trade Centre. Registered in England and Wales, company number 07059135. Parkgate Road, Chester, CH1 4AY.</div>
+        <div>Cheshire Trade Centre Limited is authorised and regulated by the Financial Conduct Authority, firm reference number 658363. We are a credit broker, not a lender, and we work with a panel of lenders.</div>
+        <div class="small"><a href="privacy.html">Company policies</a> · <a href="complaints-policy.html">Complaints</a> · <a href="privacy.html">Privacy</a> · <a href="dist/pdf/idd.pdf">Initial Disclosure Document</a></div>
+    <div class="small">This page is a demonstration build prepared by Digital Sales Consultants Ltd.</div>
+  </div>
+</footer>
+
+<div style="position:fixed;left:14px;bottom:14px;z-index:99999;background:#163149;color:#fff;font:600 12px/1.4 -apple-system,Segoe UI,Arial,sans-serif;padding:8px 12px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,.25)">Demo preview · Digital Sales Consultants</div></body>
+</html>
