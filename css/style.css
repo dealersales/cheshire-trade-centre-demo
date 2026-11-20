@@ -95,3 +95,15 @@ iframe[class*="lazyload"] { background: #f0f3f5; }
 .text-bg-primary .text-secondary,.text-bg-primary-l .text-secondary,
 .text-bg-secondary .text-secondary,.text-bg-dark .text-secondary,
 footer .text-secondary,#details-bar-mobile .text-secondary,.offcanvas .text-secondary{color:#0889C8 !important}
+
+/* --- Bright accent on dark surfaces ------------------------------------------
+   Woody's list (20 Nov 2026): the Open badge, the stock count inside the search
+   button, View Current Stock / Browse Cars, and the make-count numbers in the
+   footer. All were navy, which is invisible on the black and navy panels. */
+.is-open{background:#0889C8 !important;color:#fff !important}
+.total-count{background:#0889C8 !important;color:#fff !important;border-radius:.25rem;padding:0 .4rem;margin:0 .1rem}
+#footer-makes .make-count{background:#0889C8 !important;color:#fff !important}
+#hero-wrap .hero-caption .btn-secondary,.text-bg-primary .btn-secondary,.text-bg-primary-l .btn-secondary,
+.text-bg-secondary .btn-secondary{background:#0889C8 !important;border-color:#0889C8 !important;color:#fff !important}
+#hero-wrap .hero-caption .btn-secondary:hover,.text-bg-primary .btn-secondary:hover,
+.text-bg-primary-l .btn-secondary:hover,.text-bg-secondary .btn-secondary:hover{background:#0a7ab3 !important;border-color:#0a7ab3 !important}
