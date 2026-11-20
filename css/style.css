@@ -81,3 +81,10 @@ iframe[class*="lazyload"] { background: #f0f3f5; }
     background: #f0f3f5;
 }
 #aside .map { height: 360px; min-height: 360px; padding-bottom: 0 !important; }
+
+/* Contact icons (phone / email / location) in the bright accent. The text-secondary
+   utility maps to the site navy, which disappears on navy panels and reads as dark
+   against white — Woody asked for the landing page's bright blue instead. */
+.fa-phone.text-secondary,.fa-envelope.text-secondary,.fa-location-dot.text-secondary,
+.fa-map-location-dot.text-secondary,.fa-mobile-screen.text-secondary,
+.fa-mobile-screen-button.text-secondary,.fa-location-arrow.text-secondary{color:#0889C8 !important}
