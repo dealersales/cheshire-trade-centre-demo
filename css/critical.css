@@ -46,3 +46,10 @@ header[id^=header] .logo img{display:block;height:44px;width:auto}
 .fa-phone.text-secondary,.fa-envelope.text-secondary,.fa-location-dot.text-secondary,
 .fa-map-location-dot.text-secondary,.fa-mobile-screen.text-secondary,
 .fa-mobile-screen-button.text-secondary,.fa-location-arrow.text-secondary{color:#0889C8 !important}
+
+/* Bright accent wherever the navy accent sits on a dark panel. The secondary colour
+   is a navy, which disappears on navy/black cards and the footer; inside those
+   surfaces it takes the landing page's bright blue instead. */
+.text-bg-primary .text-secondary,.text-bg-primary-l .text-secondary,
+.text-bg-secondary .text-secondary,.text-bg-dark .text-secondary,
+footer .text-secondary,#details-bar-mobile .text-secondary,.offcanvas .text-secondary{color:#0889C8 !important}
